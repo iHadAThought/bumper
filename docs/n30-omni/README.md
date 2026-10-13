@@ -1,1 +1,26 @@
-IyBOMzAgT01OSSAvIFRlYWzigJljIG92ZXJsYXkgKHRoaXMgZm9yaykKClRoaXMgZm9yayBvZiBbTVZsYWRpc2xhdi9idW1wZXJdKGh0dHBzOi8vZ2l0aHViLmNvbS9NVmxhZGlzbGF2L2J1bXBlcikgYWRkcyAqKmRlcGxveW1lbnQgbm90ZXMgYW5kIEhvbWUgQXNzaXN0YW50IGhlbHBlcnMqKiB1c2VkIHRvIHJ1biBCdW1wZXIgb2ZmbGluZSB3aXRoIGFuIEVjb3ZhY3MgKipERUVCT1QgTjMwIE9NTkkqKiAoZXhhbXBsZSBlbnRpdHkgbmFtZTogVGVhbOKAmWMpLgoKIyMgV2hhdCBjaGFuZ2VkIHZzIHVwc3RyZWFtCgp8IEFyZWEgfCBOb3RlcyB8CnwtLS0tLS18LS0tLS0tLS18CnwgUm9ib3QgY2VydCB1bnBpbiB8IE4zMCBuZWVkcyBCdW1wZXIgQ0EvbGVhZiBvbiBgL2RhdGFgIHZpYSBVQVJUIOKAlCBzZWUgW2NlcnRpZmljYXRlLXVucGlubmluZy1ib3QubWRdKC4vY2VydGlmaWNhdGUtdW5waW5uaW5nLWJvdC5tZCkgfAp8IERlcGxveSBleGFtcGxlcyB8IG5naW54IFNOSSBzdHJlYW0gKyBjb21wb3NlIHVuZGVyIFtgY29uZmlncy9gXSguL2NvbmZpZ3MvKSAocGxhY2Vob2xkZXIgSVBzOyBubyBQRU1zKSB8CnwgSG9tZSBBc3Npc3RhbnQgfCBSb29tLWxhYmVsIGhlbHBlcnMsIGNsZWFuLWJ5LW5hbWUgZHJvcGRvd24sIFlBTUwgc2lkZWJhciBkYXNoYm9hcmQgdW5kZXIgW2Bob21lYXNzaXN0YW50L2BdKC4vaG9tZWFzc2lzdGFudC8pIHwKCiMjIFByaXZhY3kKClRoaXMgb3ZlcmxheSBpcyBpbnRlbnRpb25hbGx5ICoqc2FuaXRpemVkKio6CgotIE5vIFBFTS9rZXkgbWF0ZXJpYWwKLSBObyBzZXJpYWwgbnVtYmVycywgRElEcywgb3IgYWNjb3VudCB0b2tlbnMKLSBObyBsaXZlIExBTiBJUHMsIGhvc3RuYW1lcywgb3IgcGVyc29uYWwgQm9vay9HaXQgVVJMcyDigJQgcmVwbGFjZSBwbGFjZWhvbGRlcnMgd2l0aCB5b3VycwoKIyMgUXVpY2sgcGF0aAoKMS4gRGVwbG95IEJ1bXBlciAoKyBuZ2lueCBTTkkgb24gYDo0NDNgKSB1c2luZyB1cHN0cmVhbSBkb2NzIGFuZC9vciBbYGNvbmZpZ3MvYF0oLi9jb25maWdzLykuCjIuIFBvaW50IElvVCBETlMgcmV3cml0ZXMgZm9yIEVjb3ZhY3MgbmFtZXMgYXQgeW91ciBCdW1wZXIgVklQLgozLiBSZXBsYWNlIGNlcnRzIG9uIHRoZSByb2JvdCAoW2NlcnRpZmljYXRlLXVucGlubmluZy1ib3QubWRdKC4vY2VydGlmaWNhdGUtdW5waW5uaW5nLWJvdC5tZCkpLgo0LiBJbnN0YWxsIEhBIGhlbHBlcnMgKyBkYXNoYm9hcmQgKFtob21lYXNzaXN0YW50L1JFQURNRS5tZF0oLi9ob21lYXNzaXN0YW50L1JFQURNRS5tZCkpLgo=
+# N30 OMNI / Teal’c overlay (this fork)
+
+This fork of [MVladislav/bumper](https://github.com/MVladislav/bumper) adds **deployment notes and Home Assistant helpers** used to run Bumper offline with an Ecovacs **DEEBOT N30 OMNI** (example entity name: Teal’c).
+
+## What changed vs upstream
+
+| Area | Notes |
+|------|--------|
+| Robot cert unpin | N30 needs Bumper CA/leaf on `/data` via UART — see [certificate-unpinning-bot.md](./certificate-unpinning-bot.md) |
+| Deploy examples | nginx SNI stream + compose under [`configs/`](./configs/) (placeholder IPs; no PEMs) |
+| Home Assistant | Room-label helpers, clean-by-name dropdown, YAML sidebar dashboard under [`homeassistant/`](./homeassistant/) |
+
+## Privacy
+
+This overlay is intentionally **sanitized**:
+
+- No PEM/key material
+- No serial numbers, DIDs, or account tokens
+- No live LAN IPs, hostnames, or personal Book/Git URLs — replace placeholders with yours
+
+## Quick path
+
+1. Deploy Bumper (+ nginx SNI on `:443`) using upstream docs and/or [`configs/`](./configs/).
+2. Point IoT DNS rewrites for Ecovacs names at your Bumper VIP.
+3. Replace certs on the robot ([certificate-unpinning-bot.md](./certificate-unpinning-bot.md)).
+4. Install HA helpers + dashboard ([homeassistant/README.md](./homeassistant/README.md)).
