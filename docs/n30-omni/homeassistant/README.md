@@ -1,1 +1,46 @@
-IyBIb21lIEFzc2lzdGFudCBoZWxwZXJzIGZvciBUZWFsJ2Mgcm9vbXMKClRoZSBzdG9jayBFY292YWNzIG1hcCBlbnRpdHkgKGBpbWFnZS50ZWFsY19tYXBgKSBkb2VzICoqbm90KiogZHJhdyBzZWdtZW50IG51bWJlcnMgd2hlbiB0aGUgYm90IGlzIEJ1bXBlciAvIEhBLW9ubHkgKG5vIEVjb3ZhY3MgYXBwKS4gSEEgc3RpbGwga25vd3Mgc2VnbWVudHMgYDBg4oCTYDRgIG9uIGB2YWN1dW0udGVhbGNgIOKGkiBgcm9vbXMuZGVmYXVsdGAuCgojIyBJbnN0YWxsCgoxLiBPbiBIQSBPUywgZW5zdXJlIHBhY2thZ2VzIGFyZSBlbmFibGVkIGluIGBjb25maWd1cmF0aW9uLnlhbWxgOgoKICAgYGBgeWFtbAogICBob21lYXNzaXN0YW50OgogICAgIHBhY2thZ2VzOiAhaW5jbHVkZV9kaXJfbmFtZWQgcGFja2FnZXMKICAgYGBgCgoyLiBDb3B5IGB0ZWFsY19yb29tcy55YW1sYCB0byBgL2NvbmZpZy9wYWNrYWdlcy90ZWFsY19yb29tcy55YW1sYC4KCjMuIFJlbG9hZCAqKklucHV0IHRleHRzKiosICoqU2NyaXB0cyoqLCBhbmQgKipUZW1wbGF0ZSBlbnRpdGllcyoqIChEZXZlbG9wZXIgVG9vbHMg4oaSIFlBTUwpLCBvciByZXN0YXJ0IEhBLgoKIyMgVXNlCgoxLiBQdXQgYGltYWdlLnRlYWxjX21hcGAgb24gYSBkYXNoYm9hcmQuCjIuIFJ1biAqKlRlYWwnYyBpZGVudGlmeSBzZWdtZW50Kiogd2l0aCBgMGAsIHdhdGNoIHdoaWNoIHJvb20gdGhlIGJvdCBnb2VzIHRvLgozLiBUeXBlIHRoYXQgbmFtZSBpbnRvIGhlbHBlciAqKlRlYWwnYyByb29tIDAqKi4gUmVwZWF0IGZvciBgMWDigJNgNGAuCjQuIENsZWFuIGxhdGVyIHdpdGggKipUZWFsJ2MgY2xlYW4gbmFtZWQgcm9vbSoqIChlLmcuIGBraXRjaGVuYCkgb3IgKipUZWFsJ2MgY2xlYW4gc2VnbWVudCoqIGJ5IElELgoKU2Vuc29yIGBzZW5zb3IudGVhbGNfcm9vbV9sYWJlbHNgIHNob3dzIGhvdyBtYW55IGFyZSBsYWJlbGVkIGFuZCBhIGBieV9uYW1lYCBhdHRyaWJ1dGUgZm9yIGF1dG9tYXRpb25zLgoKIyMgRGFzaGJvYXJkIChzaWRlYmFyKQoKTG92ZWxhY2UgWUFNTCBkYXNoYm9hcmRzIG11c3QgYmUgcmVnaXN0ZXJlZCBpbiAqKmBjb25maWd1cmF0aW9uLnlhbWxgKiogKG5vdCBwYWNrYWdlcykuCgoxLiBDb3B5IGBkYXNoYm9hcmRzL3RlYWxjLnlhbWxgIOKGkiBgL2NvbmZpZy9kYXNoYm9hcmRzL3RlYWxjLnlhbWxgLgoyLiBVbmRlciBgbG92ZWxhY2UuZGFzaGJvYXJkc2AgaW4gYC9jb25maWcvY29uZmlndXJhdGlvbi55YW1sYCwgYWRkOgoKICAgYGBgeWFtbAogICB0ZWFsYy1jb250cm9sOgogICAgIG1vZGU6IHlhbWwKICAgICB0aXRsZTogVGVhbCdjCiAgICAgaWNvbjogbWRpOnJvYm90LXZhY3V1bQogICAgIHNob3dfaW5fc2lkZWJhcjogdHJ1ZQogICAgIHJlcXVpcmVfYWRtaW46IGZhbHNlCiAgICAgZmlsZW5hbWU6IGRhc2hib2FyZHMvdGVhbGMueWFtbAogICBgYGAKCjMuIFJlc3RhcnQgSEEuCgpTaWRlYmFyIGVudHJ5OiAqKlRlYWwnYyoqIChgdGVhbGMtY29udHJvbGApIOKAlCBtYXAsIHZhY3V1bSBjb250cm9scywgcm9vbSBsYWJlbCBoZWxwZXJzLCBJZGVudGlmeS9DbGVhbiBzZWdtZW50IGJ1dHRvbnMgMOKAkzQsIGFuZCBjbGVhbi1ieS1uYW1lLgo=
+# Home Assistant helpers for Teal'c rooms
+
+The stock Ecovacs map entity (`image.tealc_map`) does **not** draw segment numbers when the bot is Bumper / HA-only (no Ecovacs app). HA still knows segments `0`–`4` on `vacuum.tealc` → `rooms.default`.
+
+## Install
+
+1. On HA OS, ensure packages are enabled in `configuration.yaml`:
+
+   ```yaml
+   homeassistant:
+     packages: !include_dir_named packages
+   ```
+
+2. Copy `tealc_rooms.yaml` to `/config/packages/tealc_rooms.yaml`.
+
+3. Reload **Input texts**, **Scripts**, and **Template entities** (Developer Tools → YAML), or restart HA.
+
+## Use
+
+1. Put `image.tealc_map` on a dashboard.
+2. Run **Teal'c identify segment** with `0`, watch which room the bot goes to.
+3. Type that name into helper **Teal'c room 0**. Repeat for `1`–`4`.
+4. Clean later with **Teal'c clean named room** (e.g. `kitchen`) or **Teal'c clean segment** by ID.
+
+Sensor `sensor.tealc_room_labels` shows how many are labeled and a `by_name` attribute for automations.
+
+## Dashboard (sidebar)
+
+Lovelace YAML dashboards must be registered in **`configuration.yaml`** (not packages).
+
+1. Copy `dashboards/tealc.yaml` → `/config/dashboards/tealc.yaml`.
+2. Under `lovelace.dashboards` in `/config/configuration.yaml`, add:
+
+   ```yaml
+   tealc-control:
+     mode: yaml
+     title: Teal'c
+     icon: mdi:robot-vacuum
+     show_in_sidebar: true
+     require_admin: false
+     filename: dashboards/tealc.yaml
+   ```
+
+3. Restart HA.
+
+Sidebar entry: **Teal'c** (`tealc-control`) — map, vacuum controls, room label helpers, Identify/Clean segment buttons 0–4, and clean-by-name.
