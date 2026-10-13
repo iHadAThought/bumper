@@ -1,1 +1,28 @@
-IyBBZEd1YXJkIC8gUGktaG9sZSBzdHlsZSBETlMgcmV3cml0ZXMgZm9yIEJ1bXBlciBvZmZsaW5lIG1vZGUuCiMgUG9pbnQgdGhlc2UgbmFtZXMgYXQgQlVNUEVSX1ZJUCAoeW91ciBCdW1wZXIgaG9zdCBMQU4gSVApLgojCiMgSW1hZ2U6IGdoY3IuaW8vbXZsYWRpc2xhdi9idW1wZXI6ZGV2ZWxvcAojIENhcHR1cmUgcmVnaW9uIGV4YW1wbGU6IE5BIChkYy1uYS53dy5lY291c2VyLm5ldCkg4oCUIE4zMCBPTU5JIG1pZD16d2tjcWMKIwojIEV4YWN0ICsgd2lsZGNhcmRzIOKGkiBCVU1QRVJfVklQOgojICAgYXBpLW5naW90LmRjLW5hLnd3LmVjb3VzZXIubmV0CiMgICBhcGktYXBwLmRjLW5hLnd3LmVjb3VzZXIubmV0CiMgICBhcGktYmFzZS5kYy1uYS53dy5lY291c2VyLm5ldAojICAgcG9ydGFsLXd3LmVjb3VzZXIubmV0CiMgICBtcS13dy5lY291c2VyLm5ldCAvIG1xLW5hLmVjb3VzZXIubmV0CiMgICBtc2ctbmEuZWNvdXNlci5uZXQgLyBhcGktbmEuZWNvdXNlci5uZXQKIyAgIGptcS1uZ2lvdC1uYS5kYy53dy5lY291c2VyLm5ldAojICAgam1xLW5naW90LW5hLmRjLnJvYm90d3cuZWNvdXNlci5uZXQKIyAgIGxiby5lY291c2VyLm5ldCAvIGxiLmVjb3VzZXIubmV0CiMgICBnbC11cy1hcGkuZWNvdmFjcy5jb20KIyAgIGVpcy1ubHAud3cuZWNvdXNlci5uZXQKIyAgICouZWNvdXNlci5uZXQgLyAqLmRjLW5hLnd3LmVjb3VzZXIubmV0IC8gKi53dy5lY291c2VyLm5ldAojICAgKi5lY292YWNzLmNvbSAvICoucm9ib3R3dy5lY291c2VyLm5ldAojCiMgUkVTVCAoSEEgc2VsZi1ob3N0ZWQpOiBodHRwOi8vQlVNUEVSX1ZJUDoxODAwNwojIE1RVFQgKEhBIHNlbGYtaG9zdGVkKTogbXF0dDovL0JVTVBFUl9WSVA6MTg4MyAgICAjIG1xdHRzIDo4ODgzIG1heSByZXF1ZXN0IGNsaWVudCBjZXJ0CiMgSFRUUFMgLyBTTkkgKHJvYm90cyk6ICBCVU1QRVJfVklQOjQ0MwojIFhNUFA6ICAgICAgICAgICAgICAgICAgQlVNUEVSX1ZJUDo1MjIzCiMKIyBBZnRlciByZXdyaXRlIGNoYW5nZXM6IHJlY29ubmVjdC9wb3dlci1jeWNsZSB0aGUgcm9ib3Qgc28gaXQgcmUtcmVzb2x2ZXMgRE5TLgojIE4zMCBPTU5JIHN0aWxsIG5lZWRzIGNlcnQgdW5waW4gKFVBUlQpIOKAlCBzZWUgLi4vY2VydGlmaWNhdGUtdW5waW5uaW5nLWJvdC5tZAo=
+# AdGuard / Pi-hole style DNS rewrites for Bumper offline mode.
+# Point these names at BUMPER_VIP (your Bumper host LAN IP).
+#
+# Image: ghcr.io/mvladislav/bumper:develop
+# Capture region example: NA (dc-na.ww.ecouser.net) — N30 OMNI mid=zwkcqc
+#
+# Exact + wildcards → BUMPER_VIP:
+#   api-ngiot.dc-na.ww.ecouser.net
+#   api-app.dc-na.ww.ecouser.net
+#   api-base.dc-na.ww.ecouser.net
+#   portal-ww.ecouser.net
+#   mq-ww.ecouser.net / mq-na.ecouser.net
+#   msg-na.ecouser.net / api-na.ecouser.net
+#   jmq-ngiot-na.dc.ww.ecouser.net
+#   jmq-ngiot-na.dc.robotww.ecouser.net
+#   lbo.ecouser.net / lb.ecouser.net
+#   gl-us-api.ecovacs.com
+#   eis-nlp.ww.ecouser.net
+#   *.ecouser.net / *.dc-na.ww.ecouser.net / *.ww.ecouser.net
+#   *.ecovacs.com / *.robotww.ecouser.net
+#
+# REST (HA self-hosted): http://BUMPER_VIP:18007
+# MQTT (HA self-hosted): mqtt://BUMPER_VIP:1883    # mqtts :8883 may request client cert
+# HTTPS / SNI (robots):  BUMPER_VIP:443
+# XMPP:                  BUMPER_VIP:5223
+#
+# After rewrite changes: reconnect/power-cycle the robot so it re-resolves DNS.
+# N30 OMNI still needs cert unpin (UART) — see ../certificate-unpinning-bot.md
