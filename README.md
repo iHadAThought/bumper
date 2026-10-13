@@ -173,6 +173,7 @@ In-depth guides and architecture details are available in the `docs/` folder or 
 | Deebot X1 Omni     | MQTT     | `1.15.7`/`2.3.9`   | See [Discussion #51](https://github.com/MVladislav/bumper/discussions/51)                                          |
 | Deebot X2 Pro Omni | MQTT     | `1.76.6`/`1.81.10` | See [Discussion #56](https://github.com/MVladislav/bumper/discussions/56)                                          |
 | Deebot X9 Pro Omni | MQTT     | `1.17.0`/`1.42.2`  | See [Discussion #97](https://github.com/MVladislav/bumper/discussions/97)                                          |
+| Deebot N30 Omni / D30 | MQTT     | (fork-tested)      | Cert unpin required — see [docs/n30-omni/certificate-unpinning-bot.md](docs/n30-omni/certificate-unpinning-bot.md) |
 | Deebot Ozmo 601    | XMPP     |                    | Ecovacs                                                                                                            |
 | Deebot Ozmo 930    | XMPP     |                    | Ecovacs / Ecovacs Home                                                                                             |
 | Deebot M81 Pro     | XMPP     |                    | Ecovacs                                                                                                            |
