@@ -1,1 +1,50 @@
-IyBFeGFtcGxlIEJ1bXBlciArIG5naW54IGRlcGxveSAoTjMwIE9NTkkgb2ZmbGluZSBzdGFjaykuCiMgQ29weSB0byB5b3VyIGhvc3QgKGUuZy4gL29wdC9idW1wZXIvZG9ja2VyLWNvbXBvc2UueW1sKSBhbmQgc2V0IHBsYWNlaG9sZGVycy4KIyBSRVNUIHJlbWFwcGVkIDE4MDA34oaSODAwNyB3aGVuIGhvc3QgOjgwMDcgaXMgYWxyZWFkeSBpbiB1c2UuCiMgbmdpbnggc3RyZWFtIFNOSSBvbiA6NDQzOiBtcSog4oaSIE1RVFRTIDg4ODMsIGVsc2UgSFRUUFMuCnNlcnZpY2VzOgogIGJ1bXBlcjoKICAgIGltYWdlOiBnaGNyLmlvL212bGFkaXNsYXYvYnVtcGVyOmRldmVsb3AKICAgIGNvbnRhaW5lcl9uYW1lOiBidW1wZXIKICAgIHJlc3RhcnQ6IHVubGVzcy1zdG9wcGVkCiAgICBlbnZpcm9ubWVudDoKICAgICAgVFo6IFVUQwogICAgICBCVU1QRVJfQU5OT1VOQ0VfSVA6ICJCVU1QRVJfVklQIiAgICMgTEFOIElQIHJvYm90cy9IQSBzaG91bGQgcmVhY2gKICAgICAgQlVNUEVSX0xJU1RFTjogIjAuMC4wLjAiCiAgICAgIERFQlVHX0JVTVBFUl9MRVZFTDogSU5GTwogICAgICBERUJVR19CVU1QRVJfVkVSQk9TRTogIjAiCiAgICAgIEJVTVBFUl9EQVRBOiAvYnVtcGVyL2RhdGEKICAgICAgQlVNUEVSX0NFUlRTOiAvYnVtcGVyL2NlcnRzCiAgICBleHBvc2U6CiAgICAgIC0gIjQ0MyIKICAgICAgLSAiODAwNyIKICAgICAgLSAiMTg4MyIKICAgICAgLSAiODg4MyIKICAgICAgLSAiNTIyMyIKICAgIHZvbHVtZXM6CiAgICAgIC0gLi9kYXRhOi9idW1wZXIvZGF0YQogICAgICAtIC4vY2VydHM6L2J1bXBlci9jZXJ0cwogICAgICAtIC9ldGMvbG9jYWx0aW1lOi9ldGMvbG9jYWx0aW1lOnJvCiAgICBuZXR3b3JrczoKICAgICAgLSBidW1wZXIKCiAgbmdpbng6CiAgICBpbWFnZTogbmdpbng6MS4yNy1hbHBpbmUKICAgIGNvbnRhaW5lcl9uYW1lOiBidW1wZXItbmdpbngKICAgIHJlc3RhcnQ6IHVubGVzcy1zdG9wcGVkCiAgICBkZXBlbmRzX29uOgogICAgICAtIGJ1bXBlcgogICAgcG9ydHM6CiAgICAgIC0gIjQ0Mzo0NDMiCiAgICAgIC0gIjE4MDA3OjgwMDciCiAgICAgIC0gIjE4ODM6MTg4MyIKICAgICAgLSAiODg4Mzo4ODgzIgogICAgICAtICI1MjIzOjUyMjMiCiAgICB2b2x1bWVzOgogICAgICAtIC4vY29uZmlncy9uZ2lueC5jb25mOi9ldGMvbmdpbngvbmdpbnguY29uZjpybwogICAgbmV0d29ya3M6CiAgICAgIC0gYnVtcGVyCgpuZXR3b3JrczoKICBidW1wZXI6CiAgICBkcml2ZXI6IGJyaWRnZQo=
+# Example Bumper + nginx deploy (N30 OMNI offline stack).
+# Copy to your host (e.g. /opt/bumper/docker-compose.yml) and set placeholders.
+# REST remapped 18007→8007 when host :8007 is already in use.
+# nginx stream SNI on :443: mq* → MQTTS 8883, else HTTPS.
+services:
+  bumper:
+    image: ghcr.io/mvladislav/bumper:develop
+    container_name: bumper
+    restart: unless-stopped
+    environment:
+      TZ: UTC
+      BUMPER_ANNOUNCE_IP: "BUMPER_VIP"   # LAN IP robots/HA should reach
+      BUMPER_LISTEN: "0.0.0.0"
+      DEBUG_BUMPER_LEVEL: INFO
+      DEBUG_BUMPER_VERBOSE: "0"
+      BUMPER_DATA: /bumper/data
+      BUMPER_CERTS: /bumper/certs
+    expose:
+      - "443"
+      - "8007"
+      - "1883"
+      - "8883"
+      - "5223"
+    volumes:
+      - ./data:/bumper/data
+      - ./certs:/bumper/certs
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - bumper
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: bumper-nginx
+    restart: unless-stopped
+    depends_on:
+      - bumper
+    ports:
+      - "443:443"
+      - "18007:8007"
+      - "1883:1883"
+      - "8883:8883"
+      - "5223:5223"
+    volumes:
+      - ./configs/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - bumper
+
+networks:
+  bumper:
+    driver: bridge
