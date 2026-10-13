@@ -1,1 +1,53 @@
-IyBERUVCT1QgTjMwIE9NTkkg4oCUIFJlcGxhY2UgQnVtcGVyIGNlcnRzIG9uIHRoZSByb2JvdCAoVUFSVCkKCk5ld2VyIEVjb3ZhY3MgbW9kZWxzIChpbmNsdWRpbmcgKipOMzAgT01OSSoqLCBtaWQgYHp3a2NxY2ApIHBpbiBFY292YWNzIENBIG1hdGVyaWFsLiBBZnRlciBETlMgcG9pbnRzIHRoZSByb2JvdCBhdCBCdW1wZXIsIFRMUyBvZnRlbiAqKmNvbXBsZXRlcyB0aGUgbGVhZiB0aGVuIHJlc2V0cyoqIHVudGlsIEJ1bXBlcuKAmXMgQ0EvbGVhZiBhcmUgaW5zdGFsbGVkIG9uIHRoZSByb2JvdOKAmXMgYC9kYXRhYCB0cnVzdCBzdG9yZS4KClVwc3RyZWFtIGd1aWRlICh0ZXN0ZWQgb24gKipUMTAgUGx1cyoqOyBOMzAgcGF0aHMgbWF5IGRpZmZlcik6ICAKaHR0cHM6Ly9tdmxhZGlzbGF2LmdpdGh1Yi5pby9idW1wZXIvaW50ZXJuYWxzL2NlcnRpZmljYXRlLXVucGlubmluZy1ib3QvCgpOMzAgaXMgKipub3QqKiBvbiBCdW1wZXLigJlzIHRlc3RlZC1tb2RlbCBsaXN0LiBQcmVmZXIgKipPcHRpb24gMSoqIChyZXBsYWNlIGNlcnRzIHVuZGVyIGAvZGF0YWApLiBTdG9wIGlmIGJvb3QvVUFSVCBsYXlvdXQgZG9lcyBub3QgbWF0Y2guCgojIyBXaGF0IHRvIGNvcHkgKGhvc3Qg4oaSIHJvYm90KQoKRnJvbSB5b3VyIEJ1bXBlciBob3N0IGNlcnQgZGlyZWN0b3J5IChkZWZhdWx0IGBjZXJ0cy9gIG5leHQgdG8gdGhlIEJ1bXBlciBkYXRhIHZvbHVtZSwgb3Igd2hlcmV2ZXIgYEJVTVBFUl9DRVJUU2AgcG9pbnRzKToKCnwgSG9zdCBmaWxlIHwgT24gcm9ib3QgfAp8LS0tLS0tLS0tLS18LS0tLS0tLS0tLXwKfCBgY2EuY3J0YCB8IG92ZXJ3cml0ZSBgL2RhdGEvY2EuY3J0YCB8CnwgYGNhLmNydGAgfCBvdmVyd3JpdGUgYC9kYXRhL2NhLWNlcnRpZmljYXRlcy9jYS5wZW1gIHwKfCBgYnVtcGVyLmNydGAgdGhlbiBgY2EuY3J0YCB8ICoqYXBwZW5kKiogdG8gYC9kYXRhL2NhLWNlcnRpZmljYXRlcy9jYS1jZXJ0aWZpY2F0ZXMuY3J0YCB8CgpEbyAqKm5vdCoqIGNvcHkgYGNhLmtleWAgLyBgYnVtcGVyLmtleWAgb250byB0aGUgcm9ib3Qg4oCUIG9ubHkgdHJ1c3Qtc3RvcmUgUEVNcy4KCktlZXAgUEVNcyBvdXQgb2YgZ2l0LiBTdGFnZSBjb3BpZXMgb24gYSBzZWN1cmUgaG9zdCBwYXRoIChleGFtcGxlOiBgL29wdC9idW1wZXIvY2VydHMtZXhwb3J0L3tjYS5jcnQsYnVtcGVyLmNydH1gKSBhbmQgdHJhbnNmZXIgb3ZlciBTU0ggd2hlbiB5b3UgYXJlIHJlYWR5IGZvciBVQVJUIHdvcmsuCgojIyBIYXJkd2FyZQoKLSBVU0LigJNUVEwgVUFSVCBhZGFwdGVyICgqKjMuMyBWIG9ubHkqKiDigJQgbmV2ZXIgNSBWKQotIEFjY2VzcyB0byByb2JvdCBVQVJUIHBhZHMgKG1vZGVsLXNwZWNpZmljOyBUMTAgcGhvdG9zIGluIHRoZSB1cHN0cmVhbSBndWlkZSBhcmUgcmVmZXJlbmNlIG9ubHkpCi0gSG9zdCB3aXRoIGBwaWNvY29tYCAvIGB0aW9gIC8gYG1pbmljb21gIEAgKioxMTUyMDAgOE4xKiosIG5vIGZsb3cgY29udHJvbAoKIyMgT3B0aW9uIDEgY2hlY2tsaXN0IChvbiB0aGUgYm90KQoKMS4gQXR0YWNoIFVBUlQ7IG9wZW4gY29uc29sZSBAIDExNTIwMDsgcG93ZXItY3ljbGUgdGhlIHJvYm90OyBpbnRlcnJ1cHQgYXV0b2Jvb3QgKG9mdGVuIGFueSBrZXkgLyBgQ1RSTCtDYCBpbnRvIEhvYm90IC8gVS1Cb290KS4KMi4gQm9vdCB0byBzaGVsbDogYHNldGVudiBib290YXJncyAke2Jvb3RhcmdzfSBpbml0PS9iaW4vYmFzaGAgdGhlbiBgYm9vdGAuCjMuIE1vdW50IGAvZGF0YWAgKHByZWZlciBgL2V0Yy9yYy5kL21vdW50X2RhdGEuc2ggc3RhcnRgOyBlbHNlIEdQVCBgZGF0YWAgcGFydGl0aW9uIOKGkiBgbW91bnQgLXQgZXh0NCAtbyBydyAvZGV2L3JrZmxhc2gwcE4gL2RhdGFgIOKAlCAqKmNvbmZpcm0gYE5gIGZyb20gdGhpcyBib3TigJlzIEdQVCBsb2cqKikuCjQuIE9uIHRoZSBib3Q6CiAgIC0gT3ZlcndyaXRlIGAvZGF0YS9jYS5jcnRgIOKGkCBob3N0IGBjYS5jcnRgCiAgIC0gT3ZlcndyaXRlIGAvZGF0YS9jYS1jZXJ0aWZpY2F0ZXMvY2EucGVtYCDihpAgaG9zdCBgY2EuY3J0YAogICAtICoqQXBwZW5kKiogKGRvIG5vdCB3aXBlKSB0byBgL2RhdGEvY2EtY2VydGlmaWNhdGVzL2NhLWNlcnRpZmljYXRlcy5jcnRgOiBmaXJzdCBgYnVtcGVyLmNydGAsIHRoZW4gYGNhLmNydGAKNS4gYHN5bmNgOyByZWJvb3Q7IGxlYXZlIHRoZSByb2JvdCBvbiB0aGUgU1NJRCB0aGF0IHJlc29sdmVzIEVjb3ZhY3MgbmFtZXMgdG8geW91ciBCdW1wZXIgVklQLgo2LiBXaXRoaW4gfjYwcywgY29uZmlybSBvbiB0aGUgQnVtcGVyIGhvc3QgdGhhdCB0aGUgcm9ib3TigJlzIGNsaWVudCBJUCBzaG93cyBzdWNjZXNzZnVsIEhUVFBTL01RVFQgKG5vIGVuZGxlc3MgYFNTTCBoYW5kc2hha2UgZmFpbGVkYCAvIGBDb25uZWN0aW9uUmVzZXRFcnJvcmApLCBhbmQgdGhhdCBCdW1wZXLigJlzIGJvdCBsaXN0IHNob3dzIHRoZSB2YWN1dW0gYXMgY29ubmVjdGVkLiBIb21lIEFzc2lzdGFudCAoYERlZWJvdFVuaXZlcnNpdHlgIC8gQnVtcGVyIGludGVncmF0aW9uKSBjYW4gdGhlbiBjcmVhdGUgdmFjdXVtIGVudGl0aWVzLgoKIyMgUm9sbGJhY2sgLyBjYXZlYXRzCgotIEZhY3RvcnkgcmVzZXQgb3IgZmlybXdhcmUgT1RBIGNhbiB3aXBlIGAvZGF0YWAgY2VydHMg4oCUIHJlcGVhdCBPcHRpb24gMS4KLSBQcmVmZXIgY29tcGxldGluZyBvZmZpY2lhbCBjbG91ZCBwYWlyaW5nICoqYmVmb3JlKiogdGhlIGZpcnN0IGNlcnQgcmVwbGFjZS4KLSBPcHRpb24gMiAocm9vdGZzIHJlZmxhc2gpIGluIHVwc3RyZWFtIGRvY3MgaXMgKippbmNvbXBsZXRlIC8gYnJpY2sgcmlzayoqIOKAlCBkbyBub3QgdXNlIHVubGVzcyBPcHRpb24gMSBmYWlscyBhbmQgeW91IGFjY2VwdCB0aGF0IHJpc2suCi0gV2FycmFudHkgLyBUb1M6IHZvaWRlZDsgcHJvY2VlZCBhdCB5b3VyIG93biByaXNrLgoKIyMgUmVsYXRlZCBpbiB0aGlzIGZvcmsKCi0gT3ZlcmxheSBvdmVydmlldzogW2Bkb2NzL24zMC1vbW5pL1JFQURNRS5tZGBdKC4vUkVBRE1FLm1kKQotIEV4YW1wbGUgY29tcG9zZSAvIG5naW54IC8gRE5TIGNoZWNrbGlzdDogW2Bkb2NzL24zMC1vbW5pL2NvbmZpZ3MvYF0oLi9jb25maWdzLykKLSBIb21lIEFzc2lzdGFudCByb29tIGhlbHBlcnMgKyBUZWFs4oCZYyBkYXNoYm9hcmQ6IFtgZG9jcy9uMzAtb21uaS9ob21lYXNzaXN0YW50L2BdKC4vaG9tZWFzc2lzdGFudC8pCg==
+# DEEBOT N30 OMNI — Replace Bumper certs on the robot (UART)
+
+Newer Ecovacs models (including **N30 OMNI**, mid `zwkcqc`) pin Ecovacs CA material. After DNS points the robot at Bumper, TLS often **completes the leaf then resets** until Bumper’s CA/leaf are installed on the robot’s `/data` trust store.
+
+Upstream guide (tested on **T10 Plus**; N30 paths may differ):  
+https://mvladislav.github.io/bumper/internals/certificate-unpinning-bot/
+
+N30 is **not** on Bumper’s tested-model list. Prefer **Option 1** (replace certs under `/data`). Stop if boot/UART layout does not match.
+
+## What to copy (host → robot)
+
+From your Bumper host cert directory (default `certs/` next to the Bumper data volume, or wherever `BUMPER_CERTS` points):
+
+| Host file | On robot |
+|-----------|----------|
+| `ca.crt` | overwrite `/data/ca.crt` |
+| `ca.crt` | overwrite `/data/ca-certificates/ca.pem` |
+| `bumper.crt` then `ca.crt` | **append** to `/data/ca-certificates/ca-certificates.crt` |
+
+Do **not** copy `ca.key` / `bumper.key` onto the robot — only trust-store PEMs.
+
+Keep PEMs out of git. Stage copies on a secure host path (example: `/opt/bumper/certs-export/{ca.crt,bumper.crt}`) and transfer over SSH when you are ready for UART work.
+
+## Hardware
+
+- USB–TTL UART adapter (**3.3 V only** — never 5 V)
+- Access to robot UART pads (model-specific; T10 photos in the upstream guide are reference only)
+- Host with `picocom` / `tio` / `minicom` @ **115200 8N1**, no flow control
+
+## Option 1 checklist (on the bot)
+
+1. Attach UART; open console @ 115200; power-cycle the robot; interrupt autoboot (often any key / `CTRL+C` into Hobot / U-Boot).
+2. Boot to shell: `setenv bootargs ${bootargs} init=/bin/bash` then `boot`.
+3. Mount `/data` (prefer `/etc/rc.d/mount_data.sh start`; else GPT `data` partition → `mount -t ext4 -o rw /dev/rkflash0pN /data` — **confirm `N` from this bot’s GPT log**).
+4. On the bot:
+   - Overwrite `/data/ca.crt` ← host `ca.crt`
+   - Overwrite `/data/ca-certificates/ca.pem` ← host `ca.crt`
+   - **Append** (do not wipe) to `/data/ca-certificates/ca-certificates.crt`: first `bumper.crt`, then `ca.crt`
+5. `sync`; reboot; leave the robot on the SSID that resolves Ecovacs names to your Bumper VIP.
+6. Within ~60s, confirm on the Bumper host that the robot’s client IP shows successful HTTPS/MQTT (no endless `SSL handshake failed` / `ConnectionResetError`), and that Bumper’s bot list shows the vacuum as connected. Home Assistant (`DeebotUniversity` / Bumper integration) can then create vacuum entities.
+
+## Rollback / caveats
+
+- Factory reset or firmware OTA can wipe `/data` certs — repeat Option 1.
+- Prefer completing official cloud pairing **before** the first cert replace.
+- Option 2 (rootfs reflash) in upstream docs is **incomplete / brick risk** — do not use unless Option 1 fails and you accept that risk.
+- Warranty / ToS: voided; proceed at your own risk.
+
+## Related in this fork
+
+- Overlay overview: [`docs/n30-omni/README.md`](./README.md)
+- Example compose / nginx / DNS checklist: [`docs/n30-omni/configs/`](./configs/)
+- Home Assistant room helpers + Teal’c dashboard: [`docs/n30-omni/homeassistant/`](./homeassistant/)
