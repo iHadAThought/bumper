@@ -1,1 +1,7 @@
-IyBEZXBsb3kgZXhhbXBsZXMgKHNhbml0aXplZCkKCi0gYGRvY2tlci1jb21wb3NlLmJ1bXBlci55bWxgIOKAlCBCdW1wZXIgKyBuZ2lueDsgc2V0IGBCVU1QRVJfQU5OT1VOQ0VfSVBgIHRvIHlvdXIgVklQCi0gYG5naW54LmNvbmZgIOKAlCBTTkkgc3RyZWFtIHJvdXRlciBmb3IgYDo0NDNgCi0gYGJ1bXBlci1kbnMtcmV3cml0ZXMudHh0YCDigJQgY2hlY2tsaXN0IG9mIEVjb3ZhY3MgbmFtZXMgdG8gcmV3cml0ZQoKTm8gY2VydGlmaWNhdGVzIG9yIHByaXZhdGUga2V5cyBhcmUgaW5jbHVkZWQuIEdlbmVyYXRlIG9yIGNvcHkgUEVNcyBvbiB0aGUgaG9zdCBvbmx5Lgo=
+# Deploy examples (sanitized)
+
+- `docker-compose.bumper.yml` — Bumper + nginx; set `BUMPER_ANNOUNCE_IP` to your VIP
+- `nginx.conf` — SNI stream router for `:443`
+- `bumper-dns-rewrites.txt` — checklist of Ecovacs names to rewrite
+
+No certificates or private keys are included. Generate or copy PEMs on the host only.
